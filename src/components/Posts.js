@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import Post from "./Post";
 
 export default function Posts() {
 
@@ -16,7 +17,7 @@ export default function Posts() {
         <div>
             <ul>
                 {
-                    posts.map(value => <li key={value.id}>{value.title}</li>)
+                    posts.map(value => <li key={value.id}><Post item={value}/></li>)
                 }
             </ul>
         </div>
